@@ -24,5 +24,3 @@ class GenreSlugRelatedField(serializers.SlugRelatedField):
 class AuthorSlugRelatedField(serializers.SlugRelatedField):
     def to_representation(self, author):
         return author.username
-
-
