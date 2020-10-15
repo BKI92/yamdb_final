@@ -18,8 +18,7 @@ Versioning
 Authors
 Balashov Konstantin
 
-License
-Этот проект использует лицензию MIT License - для подробностей смотрите  the LICENSE.md 
+
 
 Acknowledgments
 Спасибо, всем кто воспользовался данным сервисом, буду рад обратной связи.
