@@ -7,7 +7,7 @@ API YAMDB
 
 Getting Started
 - запуск проекта выполняется командой <docker-compose up>
-# следующий шаги
+  следующий шаги
  - открываем терминал <docker exec -it CONTAINER_ID bash>
  - миграция <python manage.py migrate>
  - создание администратора <python manage.py createsuperuser>
