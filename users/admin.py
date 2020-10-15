@@ -5,7 +5,8 @@ from users.models import CustomUser
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'role', 'first_name', 'last_name', 'bio')
+    list_display = (
+        'username', 'email', 'role', 'first_name', 'last_name', 'bio')
     fields = ('username', 'email', 'role', 'first_name', 'last_name', 'bio')
     search_fields = ('username', 'email', 'role')
     list_filter = ('username', 'email')

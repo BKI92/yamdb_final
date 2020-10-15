@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Category, Genre, Title
+from api.models import Category, Genre
 
 
 class CategorySlugRelatedField(serializers.SlugRelatedField):
@@ -24,5 +24,3 @@ class GenreSlugRelatedField(serializers.SlugRelatedField):
 class AuthorSlugRelatedField(serializers.SlugRelatedField):
     def to_representation(self, author):
         return author.username
-
-
