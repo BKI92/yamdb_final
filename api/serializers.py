@@ -22,7 +22,7 @@ class MyTokenObtainPairSerializer(serializers.Serializer):
         if dt.datetime.now(dt.timezone.utc) - UserCode.objects.get(
                 email=email).created >= dt.timedelta(minutes=10000):
             raise serializers.ValidationError(
-                f"Your verification code is outdated.")
+                "Your verification code is outdated.")
         new_user = CustomUser.objects.get(email=email)
         refresh = self.get_token(new_user)
         data['refresh'] = str(refresh)
@@ -37,20 +37,24 @@ class MyTokenObtainPairSerializer(serializers.Serializer):
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ('first_name', 'last_name', 'username', 'bio', 'email', 'role')
+        fields = (
+            'first_name', 'last_name', 'username', 'bio', 'email', 'role'
+        )
 
     def validate_username(self, data):
         username = self.context['request'].data.get('username')
         if CustomUser.objects.filter(username=username):
             raise serializers.ValidationError(
-                f"User with this username already exist.")
+                "User with this username already exist.")
         return data
 
 
 class SpecificUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ('first_name', 'last_name', 'username', 'bio', 'email', 'role')
+        fields = (
+            'first_name', 'last_name', 'username', 'bio', 'email', 'role'
+        )
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -62,10 +66,10 @@ class CategorySerializer(serializers.ModelSerializer):
         slug = self.context['request'].data.get('slug')
         if not slug:
             raise serializers.ValidationError(
-                f"Slug is the requirement field.")
+                "Slug is the requirement field.")
         if Genre.objects.filter(slug=slug):
             raise serializers.ValidationError(
-                f"Category with this slug already exist.")
+                "Category with this slug already exist.")
         return attrs
 
 
@@ -78,10 +82,10 @@ class GenresSerializer(serializers.ModelSerializer):
         slug = self.context['request'].data.get('slug')
         if not slug:
             raise serializers.ValidationError(
-                f"Slug is the requirement field.")
+                "Slug is the requirement field.")
         if Genre.objects.filter(slug=slug):
             raise serializers.ValidationError(
-                f"Genre with this slug already exist.")
+                "Genre with this slug already exist.")
         return attrs
 
 
@@ -120,13 +124,14 @@ class ReviewSerializer(serializers.ModelSerializer):
         if Review.objects.filter(author=self.context['request'].user,
                                  title=self.get_title()) and method != 'PATCH':
             raise serializers.ValidationError(
-                f"You  have already created review on this title.")
+                "You  have already created review on this title.")
 
         return attrs
 
     def get_title(self):
-        title = get_object_or_404(Title, id=self.context.get('view').kwargs.get(
-            'title_id'))
+        title = get_object_or_404(
+            Title, id=self.context.get('view').kwargs.get(
+                'title_id'))
         return title
 
 

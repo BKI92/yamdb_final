@@ -1,4 +1,0 @@
-[2020-09-29 23:55:45 +0000] [6] [INFO] Starting gunicorn 20.0.4
-[2020-09-29 23:55:45 +0000] [6] [INFO] Listening at: http://0.0.0.0:8000 (6)
-[2020-09-29 23:55:45 +0000] [6] [INFO] Using worker: sync
-[2020-09-29 23:55:45 +0000] [8] [INFO] Booting worker with pid: 8

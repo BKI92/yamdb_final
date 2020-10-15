@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.models import Category, Genre, Title
+from api.models import Category, Genre
 
 
 class CategorySlugRelatedField(serializers.SlugRelatedField):
