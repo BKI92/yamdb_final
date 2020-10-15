@@ -56,7 +56,7 @@ jobs:
    - name: executing remote ssh commands to deploy
      uses: appleboy/ssh-action@master
      with:
-       host: 84.201.177.182
+       host: 84.201.162.220
        username: pure_deception
        key: ${{ secrets.SSH_KEY }}
        passphrase: ${{ secrets.PASSPHRASE }} #
