@@ -30,7 +30,7 @@ jobs:
         run: flake8 --exclude tests,users/migrations,api/migrations,api/urls.py,tests.py.
         
       - name: Test with pytest
-        run: pytest tests.py
+        run: pytest tests
 
 
   push_to_docker_hub:
