@@ -7,22 +7,21 @@ API YAMDB
 
 Getting Started
 - запуск проекта выполняется командой <docker-compose up>
-  
-  
-  Далее выполняем следующий шаги
- - открываем терминал <docker exec -it CONTAINER_ID bash>
- - миграция <python manage.py migrate>
- - создание администратора <python manage.py createsuperuser>
+- открываем терминал <docker exec -it CONTAINER_ID bash>
+- миграция <python manage.py migrate>
+- создание администратора <python manage.py createsuperuser>
+
 
 Built With
 DRF - Django Rest Framework
 
+
 Versioning
 На данный момент версия проекта v1. Чтобы узнать доступные версии смотрите теги в этом репозитории.
 
+
 Authors
 Balashov Konstantin
-
 
 
 Acknowledgments
