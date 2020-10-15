@@ -59,10 +59,10 @@ jobs:
        host: 84.201.162.220
        username: pure_deception
        key: ${{ secrets.SSH_KEY }}
-       passphrase: ${{ secrets.PASSPHRASE }} #
+       passphrase: ${{ secrets.PASSPHRASE }}
        script: |
          sudo docker pull konstantin01/yamdb_final
-         sudo docker stop $(docker ps -a -q)
+         sudo docker stop $(sudo docker ps -a -q)
          sudo docker run --rm -d -p 5000:5000 konstantin01/yamdb_final
          
   send_message:
