@@ -11,7 +11,7 @@ Getting Started
 - DB_HOST=db
 - DB_PORT=5432
 - запуск проекта выполняется командой <docker-compose up>
-# следующий шаги
+# Далее необходимо выполнить следующий шаги
  - открываем терминал <docker exec -it web bash>
  - миграция <python manage.py migrate>
  - создание администратора <python manage.py createsuperuser>
