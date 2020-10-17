@@ -12,8 +12,9 @@ API YAMDB
 - POSTGRES_PASSWORD=пароль
 - DB_HOST=db
 - DB_PORT=5432
-- запуск проекта выполняется командой <docker-compose up>
- 
+
+
+Запуск проекта выполняется командой <docker-compose up>
  
 Далее необходимо выполнить следующий шаги
  - открываем терминал <docker exec -it web bash>
