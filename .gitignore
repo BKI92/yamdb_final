@@ -19,3 +19,4 @@ __pycache__/
 static/
 posts/static/
 db.sqlite3
+sent_emails
