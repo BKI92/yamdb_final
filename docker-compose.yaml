@@ -18,6 +18,7 @@ services:
       - ./static:/code/static
       - ./media:/code/media
       - ./templates:/code/templates
+      - ./yamdb_final:/code/yamdb_final
   nginx:
     restart: always
     build: ./nginx    
