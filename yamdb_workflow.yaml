@@ -46,7 +46,7 @@ jobs:
         with:
           username: konstantin01
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: konstantin01/foodgram-project:v1
+          repository: konstantin01/foodgram-project:v1.1
           tag_with_ref: true
   
   deploy:
