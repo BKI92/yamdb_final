@@ -54,11 +54,11 @@ YaMDB отправляет письмо с кодом подтверждения
  
  
 # Built With
-DRF - Django Rest Framework
-PostgreSQL
-Nginx 
-Docker
-Docker-compose
+- DRF - Django Rest Framework
+- PostgreSQL
+- Nginx 
+- Docker
+- Docker-compose
 
 
 # Versioning
