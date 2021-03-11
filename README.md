@@ -48,12 +48,17 @@ YaMDB отправляет письмо с кодом подтверждения
  
 Далее необходимо выполнить следующий шаги
  - открываем терминал `docker exec -it web bash`
- - миграция <python manage.py migrate>
+ - создание миграций `python manage.py makemigrations`
+ - миграция `python manage.py migrate`
  - создание администратора `python manage.py createsuperuser`
  
  
 # Built With
 DRF - Django Rest Framework
+PostgreSQL
+Nginx 
+Docker
+Docker-compose
 
 
 # Versioning
